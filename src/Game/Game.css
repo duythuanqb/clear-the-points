@@ -1,0 +1,125 @@
+#root{
+    width: 100%;
+}
+.container {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+.game {
+  padding: 20px;
+  color: #222;
+  background-color: #fff;
+}
+
+.game__header {
+  margin: 0 0 8px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.game__header--win {
+  color: #16a34a; 
+}
+
+.game__header--lose {
+  color: #dc2626; 
+}
+
+.game__controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.game__label {
+  font-weight: 600;
+}
+
+.game__input {
+  width: 80px;
+  padding: 6px 8px;
+  border: 1px solid #d1d5db; 
+  border-radius: 8px;
+  outline: none;
+}
+
+.game__input:disabled {
+  background: #f9fafb; 
+  color: #6b7280;      
+}
+
+/* Buttons */
+.btn {
+  appearance: none;
+  border: 0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid  rgba(0,0,0,0.07);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.07), 0 1px 3px rgba(0,0,0,0.08);
+  background: #fff; /* gray-900 */
+  color: #000;
+  transition: transform .06s ease, filter .2s ease, background .2s ease;
+}
+
+.btn:hover { filter: brightness(1.05); }
+.btn:active { transform: translateY(1px); }
+
+.btn--secondary {
+  background: #fff;
+}
+
+.btn--ghost {
+  background: white;
+  color: #111827;
+  border: 1px solid #d1d5db;
+}
+
+.btn--danger {
+  background: #dc2626;
+}
+
+.board {
+  border: 2px solid #111827;
+  width: 500px;
+  height: 400px;
+  margin-top: 10px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  border: 1px solid #92400e; 
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+  color: #111827;
+  flex-direction: column;
+  user-select: none;
+  transition: transform .08s ease;
+}
+
+.circle:hover { transform: scale(1.05); }
+
+.circle--clicked {
+  background: tomato;
+  color: #fff;
+  border-color: #b91c1c; 
+}
+
+.game__footer {
+  margin-top: 6px;
+  font-weight: 600;
+}

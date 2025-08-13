@@ -1,0 +1,22 @@
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import './index.css'
+import Game from './Game/Game.jsx'
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/game" element={<Game />} />
+      <Route path="/" element={<h1>Trang chủ</h1>} />
+    </Routes>
+  )
+}
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StrictMode>,
+)
