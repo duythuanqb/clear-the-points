@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
-import Game from './Game/Game.jsx'
+import Game from './Game/Game'
 
 function App() {
   return (
